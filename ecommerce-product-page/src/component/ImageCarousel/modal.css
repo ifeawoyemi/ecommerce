@@ -1,0 +1,102 @@
+.container {
+    display: none;
+  }
+  
+  @media (min-width: 1440px) {
+    .container {
+      display: flex;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      padding-top: 60px;
+  
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background: rgba(0, 0, 0, 0.75);
+  
+      flex-direction: column;
+    }
+  
+    .image {
+      position: relative;
+      margin: auto;
+  
+      width: 550px;
+      height: 550px;
+      padding-bottom: 89px;
+    }
+  
+    .image img {
+      cursor: pointer;
+    }
+  
+    .image img,
+    .thumbnails img {
+      border-radius: 15px;
+    }
+  
+    .closeButton {
+      position: absolute;
+      right: 0;
+      top: -44px;
+      cursor: pointer;
+    }
+  
+    .closeButton svg path {
+      fill: #fff;
+    }
+  
+    .closeButton:hover svg path {
+      fill: #ff7e1b;
+    }
+  
+    .prev,
+    .next {
+      position: absolute;
+      top: 50%;
+      cursor: pointer;
+    }
+  
+    .prev:hover svg path,
+    .next:hover svg path {
+      stroke: #ff7e1b;
+    }
+  
+    .prev {
+      left: -28px;
+    }
+  
+    .next {
+      right: -28px;
+    }
+  
+    .thumbnails {
+      display: flex;
+      gap: 31px;
+  
+      width: 88px;
+  
+      position: absolute;
+      bottom: -128px;
+      left: 53px;
+      right: 53px;
+    }
+  
+    .thumbnail {
+      border-radius: 10px;
+      cursor: pointer;
+      background-color: #fff;
+    }
+  
+    .thumbnail:hover,
+    .active {
+      opacity: 0.5;
+    }
+  
+    .active {
+      opacity: 0.2;
+      border: 2px solid #ff7e1b;
+    }
+  }
